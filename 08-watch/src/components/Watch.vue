@@ -108,7 +108,7 @@ export default {
         this.immediateLogs.unshift(`數值更新：${oldVal} -> ${newVal}`)
         if (this.immediateLogs.length > 3) this.immediateLogs.pop()
       },
-      immediate: true // 立即執行一次
+      immediate: true  // 立即執行一次
     },
 
     // 4. 監聽多個來源

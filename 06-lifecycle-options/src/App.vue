@@ -18,11 +18,13 @@
 <script>
 import LifecycleDemo from './components/LifecycleDemo.vue'
 import SimpleLifecycle from './components/SimpleLifecycle.vue'
+import Demo from './components/Demo.vue'
 
 export default {
   components: {
     LifecycleDemo,
-    SimpleLifecycle
+    SimpleLifecycle,
+    Demo
   },
   data () {
     return {
@@ -34,10 +36,10 @@ export default {
 
 <template>
   <div>
-    <!-- <button @click="showComponent = !showComponent">
+    <button @click="showComponent = !showComponent">
       {{ showComponent ? '隱藏' : '顯示' }}
-    </button> -->
-    <SimpleLifecycle />
-    <!-- <LifecycleDemo v-if="showComponent" /> -->
+    </button>
+    <!-- <SimpleLifecycle /> -->
+    <LifecycleDemo v-if="showComponent" />
   </div>
 </template>
