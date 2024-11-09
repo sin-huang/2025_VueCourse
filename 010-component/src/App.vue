@@ -3,12 +3,14 @@ import BlogList from './components/PropsExample/BlogList.vue';
 import CardContainer from './components/SlotExample/CardContainer.vue';
 import UseItemList from './components/ScopedSlotExample/UseItemList.vue';
 import UseLayout from './components/ScopedSlotExample/UseLayout.vue';
+import Message from './components/practice_props/Message.vue';
+import CollapsePanel from './components/practice_slot/CollapsePanel.vue';
 </script>
 
 <template>
   <main>
-    <!-- <BlogList /> -->
-    <CardContainer />
+    <BlogList />
+    <!-- <CardContainer /> -->
     <!-- <UseItemList /> -->
     <!-- <UseLayout /> -->
   </main>
