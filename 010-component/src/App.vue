@@ -5,6 +5,9 @@ import UseItemList from './components/ScopedSlotExample/UseItemList.vue';
 import UseLayout from './components/ScopedSlotExample/UseLayout.vue';
 import Message from './components/practice_props/Message.vue';
 import CollapsePanel from './components/practice_slot/CollapsePanel.vue';
+import Counter from './components/emit/Counter.vue';
+import FormParent from './components/emit/FormParent.vue';
+import Cart from './components/emit/Cart.vue';
 </script>
 
 <template>
@@ -13,6 +16,9 @@ import CollapsePanel from './components/practice_slot/CollapsePanel.vue';
     <!-- <CardContainer /> -->
     <!-- <UseItemList /> -->
     <!-- <UseLayout /> -->
+    <!-- <Counter /> -->
+    <!-- <FormParent /> -->
+    <!-- <Cart /> -->
   </main>
 </template>
 
