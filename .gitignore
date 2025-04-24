@@ -13,3 +13,5 @@ dist
 dist-ssr
 coverage
 *.local
+
+/05-directives/test/*answer.html
