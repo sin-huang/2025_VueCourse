@@ -20,17 +20,24 @@
             <button @click="adoptPet(index)">領養</button>
           </li>
         </ul>
+        <h4>您目前手上擁有的寵物</h4>
+        <ul>
+          <li v-for="(pet, index) in pets" :key="index">
+            {{ pet.emoji }} {{ pet.name }} 目前有: {{ pet.num }}隻
+          </li>
+        </ul>
       </div>
     </div>
     <script>
       Vue.createApp({
         data() {
           return {
+            //陣列裡面有包4個物件
             pets: [
-              { emoji: '🐱', name: '波斯貓', price: 300 },
-              { emoji: '🐕', name: '哈士奇', price: 400 },
-              { emoji: '🐰', name: '垂耳兔', price: 200 },
-              { emoji: '🐹', name: '倉鼠', price: 100 }
+              { emoji: '🐱', name: '波斯貓', price: 300, num:0 },
+              { emoji: '🐕', name: '哈士奇', price: 400, num:0 },
+              { emoji: '🐰', name: '垂耳兔', price: 200, num:0 },
+              { emoji: '🐹', name: '倉鼠', price: 100, num:0 }
             ]
           }
         },
@@ -39,6 +46,8 @@
             alert(
               `恭喜您領養了 ${this.pets[index].emoji}${this.pets[index].name}！`
             )
+            // 因為pets是一個陣列 所以要存取裡面的物件要加上索引值 才知道你要取哪個
+            this.pets[index].num++;
           }
         }
       }).mount('#list')
