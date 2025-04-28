@@ -151,12 +151,11 @@ startGame();
 ```
 const player = {
     profile: {
-        skills 可能不存在
-        skills: ["劍術", "魔法"]
+        skills: []
     }
 };
 
 // 安全取得第一個技能
-const firstSkill = player?.profile?.skills??'沒有技能'; // ✍️
+const firstSkill = player?.profile?.skills[1]??'沒有技能'; // ✍️
 console.log(firstSkill); // 
 ```
