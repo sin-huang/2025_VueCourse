@@ -4,7 +4,7 @@
 
 ```
 const city = "台北";
-const message = ; // ✍️ 補上模板字符串
+const message = `我現在在${city}!`; // ✍️ 補上模板字符串 OK
 console.log(message); // 我現在在台北！
 ```
 
@@ -19,7 +19,7 @@ const multiply = function(x, y) {
 };
 
 // 請改寫成箭頭函式
-const modernMultiply = ; // ✍️
+const modernMultiply = (x,y) => x*y; // ✍️ OK
 ```
 
 ### 練習二：搭配 map 使用箭頭函式
@@ -27,7 +27,7 @@ const modernMultiply = ; // ✍️
 ```
 const names = ["小明", "小華", "小菁"];
 // 請用 map 和箭頭函式，製作一個每個名字加上「同學」的新陣列
-const classmates = ; // ✍️
+const classmates = names.map((name)=>`${name}同學`); // ✍️ OK
 console.log(classmates); // ["小明同學", "小華同學", "小菁同學"]
 ```
 
@@ -41,7 +41,11 @@ const hp = 120;
 
 // 請產生一個角色物件，內容有 name、hp，以及一個 attack 方法，回傳字串「勇者攻擊了！」
 const character = {
-    ; // ✍️
+    name,
+    hp,
+    attack(){
+        return `${name}攻擊了！`;
+    }; // ✍️ OK
 };
 
 console.log(character.attack()); // 勇者攻擊了！
@@ -54,7 +58,7 @@ console.log(character.attack()); // 勇者攻擊了！
 ```
 const colors = ["紅色", "藍色", "黃色"];
 // 請使用解構，取出第一個和第二個顏色
-const [firstColor, secondColor] = ; // ✍️
+const [firstColor, secondColor] = colors; // ✍️ OK
 console.log(firstColor); // 紅色
 console.log(secondColor); // 藍色
 ```
@@ -69,7 +73,7 @@ const book = {
 };
 
 // 請解構出 title 和 price
-const { ,  } = ; // ✍️
+const { title, price} = book; // ✍️ OK
 ```
 
 ## 🎨 5. 展開語法（Spread）
@@ -81,7 +85,7 @@ const teamA = ["勇者", "法師"];
 const teamB = ["弓箭手", "刺客"];
 
 // 請合併兩組玩家成一組 allPlayers
-const allPlayers = ; // ✍️
+const allPlayers = [...teamA, ...teamB]; // ✍️ OK
 console.log(allPlayers); // ["勇者", "法師", "弓箭手", "刺客"]
 ```
 
@@ -94,7 +98,10 @@ const baseStats = {
 };
 
 // 請新增一個包含 baseStats、攻擊力 attack: 30 的新物件
-const knight = ; // ✍️
+const knight = {
+    ...baseStats,
+    attack:30
+}; // ✍️ OK
 ```
 
 ## 🎁 6. 函式參數預設值（Default parameters）
@@ -125,7 +132,13 @@ const loadGame = (gameName) => {
 
 // 請使用 async/await 完成啟動流程
 const startGame = async () => {
-    ; // ✍️
+    try {
+        const res = await loadGame("卡比之星");
+        console.log(res);
+    } catch (error) {
+        console.log('載入失敗');
+    }
+     // ✍️ OK
 };
 
 startGame();
@@ -138,12 +151,12 @@ startGame();
 ```
 const player = {
     profile: {
-        // skills 可能不存在
-        // skills: ["劍術", "魔法"]
+        skills 可能不存在
+        skills: ["劍術", "魔法"]
     }
 };
 
 // 安全取得第一個技能
-const firstSkill = ; // ✍️
-console.log(firstSkill); // 沒有技能
+const firstSkill = player?.profile?.skills??'沒有技能'; // ✍️
+console.log(firstSkill); // 
 ```

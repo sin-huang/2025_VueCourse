@@ -10,7 +10,7 @@ const greeting = "你好，" + name + "！";
 ### 模板字符串（Template Literals）
 
 ```
-const modernGreeting; <== ✍️
+const modernGreeting = `你好，${name}!`;
 console.log(modernGreeting); // 你好，小明！
 ```
 
@@ -25,17 +25,23 @@ const traditionalSum = function(a, b) {
 ```
 
 ### 箭頭函式 - 更簡潔！
-
+它少了傳統函式要定義的步驟 function...
 ```
-const modernSum =; <== ✍️
+const modernSum = (a, b)=>{
+    return a + b;
+};
 ```
-
+如果很簡單的函式 可以把括號跟`return`去掉 
+```
+const modernSum = (a, b)=>a + b;
+```
 ### 箭頭函式與陣列方法的組合
 
 ```
-const fruits = ['蘋果', '香蕉', '橘子'];
-const fruitLength = fruits.map(fruit => fruit.length);
+const foods = ['蘋果', '蒜香食蔬炒牛肉', '宮保雞丁'];
+const foodLength = fruits.map(fruit => fruit.length);
 ```
+
 
 ## 🎲 3. 物件字面語法增強（Object Enhancement）
 
@@ -101,7 +107,7 @@ console.log(`${studentName} 的數學成績是 ${math}`); // 小明 的數學成
 ```
 const team1 = ['小明', '小華'];
 const team2 = ['小菁', '小強'];
-const allTeams = [...team1, ...team2];
+const allTeams = [...team1, ...team2]; 
 console.log(allTeams); // ['小明', '小華', '小菁', '小強']
 ```
 
@@ -175,6 +181,8 @@ const game = {
 ```
 
 ### 安全地存取深層屬性
+
+在每個物件前`.`之前加上`?`來確保最後是安全地拿到我們想要的資料
 
 ```
 const firstSkill = game.player?.skills?.magic?.[0] ?? '尚未學習技能';
