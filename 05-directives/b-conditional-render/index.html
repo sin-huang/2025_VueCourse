@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="../../reset.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,6 +26,8 @@
         <!-- v-else & v-else-if -->
         <div>
           <p>魔法能量: {{ magicPower }}</p>
+          <button type="button" @click="addMagicPower">點擊我升級</button>
+          <button type="button" @click="subMagicPower">點擊我降級</button>
           <div v-if="magicPower >= 80">🔥 魔法能量充沛！</div>
           <div v-else-if="magicPower >= 50">⚡ 魔法能量尚可</div>
           <div v-else>💤 需要補充魔法能量...</div>

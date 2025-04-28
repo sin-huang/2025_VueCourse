@@ -10,6 +10,12 @@ Vue.createApp({
     toggleBox() {
       this.isBoxOpen = !this.isBoxOpen
       this.isBoxVisible = !this.isBoxVisible
-    }
+    },
+    addMagicPower(){
+      this.magicPower++;
+    },
+    subMagicPower(){
+      this.magicPower--;
+    },
   }
 }).mount('#conditional')
