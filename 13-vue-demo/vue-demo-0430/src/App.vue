@@ -1,13 +1,23 @@
 <script setup>
+import { ref } from 'vue';
 import Counter from './components/Counter.vue'
 import CounterComposition from './components/CounterComposition.vue';
 import Shopping from './components/Shopping.vue'
+import BlogPost from './components/BlogPost.vue'
+
+const melody = ref('Melody Huang')
+const age = ref(25)
+
 </script>
 
 <template>
-  <shopping/>
+  <!-- 用:綁定 傳給子元件使用 -->
+  <!-- <blog-post :name="melody" :age="age"></blog-post> -->
+  <!-- 假如我沒有傳任何參數給子元件 -->
+  <blog-post></blog-post>
+  <!-- <shopping/> -->
   <!-- <counter-composition/> -->
-   <!-- <counter/> -->
+  <!-- <counter/> -->
 </template>
 
 <style scoped>

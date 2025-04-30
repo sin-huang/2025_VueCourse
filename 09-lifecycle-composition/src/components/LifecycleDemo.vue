@@ -1,4 +1,5 @@
 <script setup>
+// Vue提供的hook，都要import才能使用喔
 import {
   onBeforeMount,
   onMounted,
@@ -11,7 +12,7 @@ import {
 
 const message = ref('Hello')
 
-const users = ref([]);
+// const users = ref([]);
 // onMounted(async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/users");
 //   users.value = await res.json();
