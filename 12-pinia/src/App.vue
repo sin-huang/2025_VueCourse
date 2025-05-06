@@ -4,13 +4,13 @@ import ProductList from './components/ProductList.vue'
 import ShoppingCart from './components/ShoppingCart.vue'
 </script>
 
-<template>
+<template>  
   <main>
-    <Counter />
-    <!-- <div class="cart">
+    <!-- <Counter /> -->
+    <div class="cart">
       <ProductList />
       <ShoppingCart />
-    </div> -->
+    </div>
   </main>
 </template>
 
